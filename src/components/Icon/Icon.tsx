@@ -663,11 +663,8 @@ const IconComponent: React.FC<IconComponentProps> = ({
   focusable = false,
   ...props
 }) => {
-  const hasAltText =
-    visuallyHiddenText !== undefined ||
-    props['aria-label'] !== undefined ||
-    props['aria-labelledby'] !== undefined
-  const isAriaHidden = ariaHidden !== undefined ? ariaHidden : !hasAltText
+  const hasLabel = props['aria-label'] !== undefined || props['aria-labelledby'] !== undefined
+  const isAriaHidden = ariaHidden !== undefined ? ariaHidden : !hasLabel
   return (
     <>
       {visuallyHiddenText && <VisuallyHiddenText>{visuallyHiddenText}</VisuallyHiddenText>}

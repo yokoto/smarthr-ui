@@ -361,6 +361,7 @@ export const Position: Story = () => {
             </SecondaryButton>
           </DialogTrigger>
           <DialogContent top={50} left={200} id="dialog-position-1">
+            <button>button</button>
             <Description>This Dialog is set to `top: 50px, left: 200px`.</Description>
           </DialogContent>
         </DialogWrapper>
